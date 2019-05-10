@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import static java.time.Duration.ofMillis;
 import static java.time.Duration.ofMinutes;
 import static org.junit.jupiter.api.Assertions.assertTimeout;
+import static org.junit.jupiter.api.Assertions.assertTimeoutPreemptively;
 
 class TimeoutExample {
 
@@ -19,6 +20,14 @@ class TimeoutExample {
     @DisplayName("타임아웃 초과")
     void timeoutExceeded() {
         assertTimeout(ofMillis(10), () -> Thread.sleep(100));
+    }
+
+    @Test
+    @DisplayName("타임아웃 초과(assertTimeoutPreemptively)")
+    void timeoutExceededWithPreemptiveTermination() {
+        assertTimeoutPreemptively(ofMillis(10), () -> {
+            Thread.sleep(100);
+        });
     }
 
 }
