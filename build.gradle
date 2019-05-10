@@ -1,0 +1,18 @@
+plugins {
+    id 'idea'
+}
+
+configure(allprojects) { project ->
+
+    group 'reiphiel.junit'
+    
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+}
+
+
+repositories {
+    mavenCentral()
+}
