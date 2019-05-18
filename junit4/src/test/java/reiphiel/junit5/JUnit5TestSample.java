@@ -1,8 +1,8 @@
-package reiphiel.junit4;
+package reiphiel.junit5;
 
 import org.junit.jupiter.api.Test;
 
-class TestSample {
+class JUnit5TestSample {
     @Test
     void test() {
         System.out.println("JUnit5 test");

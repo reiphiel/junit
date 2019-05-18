@@ -12,4 +12,6 @@ dependencies {
     testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
 
     testCompile 'org.junit.vintage:junit-vintage-engine:5.4.2'
+    testCompile 'org.junit.jupiter:junit-jupiter-migrationsupport:5.4.2'
+
 }
