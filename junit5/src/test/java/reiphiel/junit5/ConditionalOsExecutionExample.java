@@ -4,8 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledOnOs;
 import org.junit.jupiter.api.condition.EnabledOnOs;
 
-import static org.junit.jupiter.api.condition.OS.MAC;
-import static org.junit.jupiter.api.condition.OS.WINDOWS;
+import static org.junit.jupiter.api.condition.OS.*;
 
 class ConditionalOsExecutionExample {
 
@@ -15,7 +14,8 @@ class ConditionalOsExecutionExample {
         System.out.println("맥에서만 실행");
     }
 
-    @MacOnlyTest
+    @Test
+    @EnabledOnOs({MAC, LINUX})
     void 리눅스_맥_전용() {
         System.out.println("리눅스나 맥에서만 실행");
     }
